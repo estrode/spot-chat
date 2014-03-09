@@ -11,6 +11,7 @@
 #define kFirechatNS @"https://spot-chat.firebaseio.com/"
 
 @interface RoomViewController ()
+@property (strong, nonatomic) IBOutlet UINavigationItem *spottNavItem;
 
 @end
 
@@ -49,6 +50,10 @@
     
     //Remove separators from Table View
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
+    //Change nav bar to have image
+    self.spottNavItem.titleView = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"SpottImage.png"]];
+
 }
 
 - (void)didReceiveMemoryWarning

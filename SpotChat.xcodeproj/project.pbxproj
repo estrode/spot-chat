@@ -25,6 +25,7 @@
 		16DAC9DD167287D400A2B44D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9DC167287D400A2B44D /* libicucore.dylib */; };
 		16DAC9DF167287DD00A2B44D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9DE167287DD00A2B44D /* Security.framework */; };
 		16DAC9E1167287E400A2B44D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9E0167287E400A2B44D /* CFNetwork.framework */; };
+		1AF0C24E18CC73B500EC1896 /* SpottImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AF0C24D18CC73B500EC1896 /* SpottImage.png */; };
 		28B5E10B18CC150F00925185 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B5E10A18CC150F00925185 /* MapViewController.m */; };
 		28B5E10D18CC169E00925185 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B5E10C18CC169E00925185 /* MapKit.framework */; };
 		28B5E10F18CC17B900925185 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B5E10E18CC17B900925185 /* CoreLocation.framework */; };
@@ -106,6 +107,7 @@
 		16DAC9DC167287D400A2B44D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		16DAC9DE167287DD00A2B44D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		16DAC9E0167287E400A2B44D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1AF0C24D18CC73B500EC1896 /* SpottImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpottImage.png; sourceTree = "<group>"; };
 		28B5E10918CC150F00925185 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		28B5E10A18CC150F00925185 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		28B5E10C18CC169E00925185 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -229,6 +231,7 @@
 		1669E521166ED05F00C535A9 /* SpotChat */ = {
 			isa = PBXGroup;
 			children = (
+				1AF0C24D18CC73B500EC1896 /* SpottImage.png */,
 				9852BB6318CC5CCD00143AB4 /* BMInitialsPlaceholderView.h */,
 				9852BB6418CC5CCD00143AB4 /* BMInitialsPlaceholderView.m */,
 				9852BB0E18CC5A0E00143AB4 /* AMBubbleTableViewController */,
@@ -430,6 +433,7 @@
 				9852BB4518CC5A0E00143AB4 /* bubbleSquareIncoming.png in Resources */,
 				9852BB4F18CC5A0E00143AB4 /* buttonSendHighlightedFlat.png in Resources */,
 				1669E535166ED05F00C535A9 /* iPhone.storyboard in Resources */,
+				1AF0C24E18CC73B500EC1896 /* SpottImage.png in Resources */,
 				9852BB5718CC5A0E00143AB4 /* imageInputFlat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
