@@ -29,6 +29,45 @@
 		28B5E10D18CC169E00925185 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B5E10C18CC169E00925185 /* MapKit.framework */; };
 		28B5E10F18CC17B900925185 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B5E10E18CC17B900925185 /* CoreLocation.framework */; };
 		985012D618CBE92D00CCA039 /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 985012D518CBE92D00CCA039 /* RoomViewController.m */; };
+		9852BB3C18CC5A0E00143AB4 /* AMBubbleAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852BB1018CC5A0E00143AB4 /* AMBubbleAccessoryView.m */; };
+		9852BB3D18CC5A0E00143AB4 /* AMBubbleFlatAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852BB1218CC5A0E00143AB4 /* AMBubbleFlatAccessoryView.m */; };
+		9852BB3E18CC5A0E00143AB4 /* AMBubbleGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852BB1418CC5A0E00143AB4 /* AMBubbleGlobals.m */; };
+		9852BB3F18CC5A0E00143AB4 /* AMBubbleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852BB1618CC5A0E00143AB4 /* AMBubbleTableCell.m */; };
+		9852BB4018CC5A0E00143AB4 /* AMBubbleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852BB1818CC5A0E00143AB4 /* AMBubbleTableViewController.m */; };
+		9852BB4118CC5A0E00143AB4 /* bubbleFlatIncoming.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB1A18CC5A0E00143AB4 /* bubbleFlatIncoming.png */; };
+		9852BB4218CC5A0E00143AB4 /* bubbleFlatIncoming@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB1B18CC5A0E00143AB4 /* bubbleFlatIncoming@2x.png */; };
+		9852BB4318CC5A0E00143AB4 /* bubbleFlatOutgoing.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB1C18CC5A0E00143AB4 /* bubbleFlatOutgoing.png */; };
+		9852BB4418CC5A0E00143AB4 /* bubbleFlatOutgoing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB1D18CC5A0E00143AB4 /* bubbleFlatOutgoing@2x.png */; };
+		9852BB4518CC5A0E00143AB4 /* bubbleSquareIncoming.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB1E18CC5A0E00143AB4 /* bubbleSquareIncoming.png */; };
+		9852BB4618CC5A0E00143AB4 /* bubbleSquareIncoming@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB1F18CC5A0E00143AB4 /* bubbleSquareIncoming@2x.png */; };
+		9852BB4718CC5A0E00143AB4 /* bubbleSquareOutgoing.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2018CC5A0E00143AB4 /* bubbleSquareOutgoing.png */; };
+		9852BB4818CC5A0E00143AB4 /* bubbleSquareOutgoing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2118CC5A0E00143AB4 /* bubbleSquareOutgoing@2x.png */; };
+		9852BB4918CC5A0E00143AB4 /* buttonSend.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2218CC5A0E00143AB4 /* buttonSend.png */; };
+		9852BB4A18CC5A0E00143AB4 /* buttonSend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2318CC5A0E00143AB4 /* buttonSend@2x.png */; };
+		9852BB4B18CC5A0E00143AB4 /* buttonSendFlat.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2418CC5A0E00143AB4 /* buttonSendFlat.png */; };
+		9852BB4C18CC5A0E00143AB4 /* buttonSendFlat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2518CC5A0E00143AB4 /* buttonSendFlat@2x.png */; };
+		9852BB4D18CC5A0E00143AB4 /* buttonSendHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2618CC5A0E00143AB4 /* buttonSendHighlighted.png */; };
+		9852BB4E18CC5A0E00143AB4 /* buttonSendHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2718CC5A0E00143AB4 /* buttonSendHighlighted@2x.png */; };
+		9852BB4F18CC5A0E00143AB4 /* buttonSendHighlightedFlat.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2818CC5A0E00143AB4 /* buttonSendHighlightedFlat.png */; };
+		9852BB5018CC5A0E00143AB4 /* buttonSendHighlightedFlat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2918CC5A0E00143AB4 /* buttonSendHighlightedFlat@2x.png */; };
+		9852BB5118CC5A0E00143AB4 /* imageBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2A18CC5A0E00143AB4 /* imageBar.png */; };
+		9852BB5218CC5A0E00143AB4 /* imageBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2B18CC5A0E00143AB4 /* imageBar@2x.png */; };
+		9852BB5318CC5A0E00143AB4 /* imageBarFlat.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2C18CC5A0E00143AB4 /* imageBarFlat.png */; };
+		9852BB5418CC5A0E00143AB4 /* imageBarFlat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2D18CC5A0E00143AB4 /* imageBarFlat@2x.png */; };
+		9852BB5518CC5A0E00143AB4 /* imageInput.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2E18CC5A0E00143AB4 /* imageInput.png */; };
+		9852BB5618CC5A0E00143AB4 /* imageInput@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB2F18CC5A0E00143AB4 /* imageInput@2x.png */; };
+		9852BB5718CC5A0E00143AB4 /* imageInputFlat.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB3018CC5A0E00143AB4 /* imageInputFlat.png */; };
+		9852BB5818CC5A0E00143AB4 /* imageInputFlat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB3118CC5A0E00143AB4 /* imageInputFlat@2x.png */; };
+		9852BB5918CC5A0E00143AB4 /* messageBubbleBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB3218CC5A0E00143AB4 /* messageBubbleBlue.png */; };
+		9852BB5A18CC5A0E00143AB4 /* messageBubbleBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB3318CC5A0E00143AB4 /* messageBubbleBlue@2x.png */; };
+		9852BB5B18CC5A0E00143AB4 /* messageBubbleGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB3418CC5A0E00143AB4 /* messageBubbleGray.png */; };
+		9852BB5C18CC5A0E00143AB4 /* messageBubbleGray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB3518CC5A0E00143AB4 /* messageBubbleGray@2x.png */; };
+		9852BB5D18CC5A0E00143AB4 /* messageBubbleGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB3618CC5A0E00143AB4 /* messageBubbleGreen.png */; };
+		9852BB5E18CC5A0E00143AB4 /* messageBubbleGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB3718CC5A0E00143AB4 /* messageBubbleGreen@2x.png */; };
+		9852BB5F18CC5A0E00143AB4 /* messageBubbleHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB3818CC5A0E00143AB4 /* messageBubbleHighlighted.png */; };
+		9852BB6018CC5A0E00143AB4 /* messageBubbleHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB3918CC5A0E00143AB4 /* messageBubbleHighlighted@2x.png */; };
+		9852BB6118CC5A0E00143AB4 /* messageBubbleTyping.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB3A18CC5A0E00143AB4 /* messageBubbleTyping.png */; };
+		9852BB6218CC5A0E00143AB4 /* messageBubbleTyping@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB3B18CC5A0E00143AB4 /* messageBubbleTyping@2x.png */; };
 		ED9A7E4216F7C6F100030E3E /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9A7E4116F7C6F100030E3E /* Firebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +111,50 @@
 		28B5E10E18CC17B900925185 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		985012D418CBE92D00CCA039 /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomViewController.h; sourceTree = "<group>"; };
 		985012D518CBE92D00CCA039 /* RoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomViewController.m; sourceTree = "<group>"; };
+		9852BB0F18CC5A0E00143AB4 /* AMBubbleAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBubbleAccessoryView.h; sourceTree = "<group>"; };
+		9852BB1018CC5A0E00143AB4 /* AMBubbleAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBubbleAccessoryView.m; sourceTree = "<group>"; };
+		9852BB1118CC5A0E00143AB4 /* AMBubbleFlatAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBubbleFlatAccessoryView.h; sourceTree = "<group>"; };
+		9852BB1218CC5A0E00143AB4 /* AMBubbleFlatAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBubbleFlatAccessoryView.m; sourceTree = "<group>"; };
+		9852BB1318CC5A0E00143AB4 /* AMBubbleGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBubbleGlobals.h; sourceTree = "<group>"; };
+		9852BB1418CC5A0E00143AB4 /* AMBubbleGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBubbleGlobals.m; sourceTree = "<group>"; };
+		9852BB1518CC5A0E00143AB4 /* AMBubbleTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBubbleTableCell.h; sourceTree = "<group>"; };
+		9852BB1618CC5A0E00143AB4 /* AMBubbleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBubbleTableCell.m; sourceTree = "<group>"; };
+		9852BB1718CC5A0E00143AB4 /* AMBubbleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBubbleTableViewController.h; sourceTree = "<group>"; };
+		9852BB1818CC5A0E00143AB4 /* AMBubbleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBubbleTableViewController.m; sourceTree = "<group>"; };
+		9852BB1A18CC5A0E00143AB4 /* bubbleFlatIncoming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleFlatIncoming.png; sourceTree = "<group>"; };
+		9852BB1B18CC5A0E00143AB4 /* bubbleFlatIncoming@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleFlatIncoming@2x.png"; sourceTree = "<group>"; };
+		9852BB1C18CC5A0E00143AB4 /* bubbleFlatOutgoing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleFlatOutgoing.png; sourceTree = "<group>"; };
+		9852BB1D18CC5A0E00143AB4 /* bubbleFlatOutgoing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleFlatOutgoing@2x.png"; sourceTree = "<group>"; };
+		9852BB1E18CC5A0E00143AB4 /* bubbleSquareIncoming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleSquareIncoming.png; sourceTree = "<group>"; };
+		9852BB1F18CC5A0E00143AB4 /* bubbleSquareIncoming@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleSquareIncoming@2x.png"; sourceTree = "<group>"; };
+		9852BB2018CC5A0E00143AB4 /* bubbleSquareOutgoing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleSquareOutgoing.png; sourceTree = "<group>"; };
+		9852BB2118CC5A0E00143AB4 /* bubbleSquareOutgoing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleSquareOutgoing@2x.png"; sourceTree = "<group>"; };
+		9852BB2218CC5A0E00143AB4 /* buttonSend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonSend.png; sourceTree = "<group>"; };
+		9852BB2318CC5A0E00143AB4 /* buttonSend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonSend@2x.png"; sourceTree = "<group>"; };
+		9852BB2418CC5A0E00143AB4 /* buttonSendFlat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonSendFlat.png; sourceTree = "<group>"; };
+		9852BB2518CC5A0E00143AB4 /* buttonSendFlat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonSendFlat@2x.png"; sourceTree = "<group>"; };
+		9852BB2618CC5A0E00143AB4 /* buttonSendHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonSendHighlighted.png; sourceTree = "<group>"; };
+		9852BB2718CC5A0E00143AB4 /* buttonSendHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonSendHighlighted@2x.png"; sourceTree = "<group>"; };
+		9852BB2818CC5A0E00143AB4 /* buttonSendHighlightedFlat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonSendHighlightedFlat.png; sourceTree = "<group>"; };
+		9852BB2918CC5A0E00143AB4 /* buttonSendHighlightedFlat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonSendHighlightedFlat@2x.png"; sourceTree = "<group>"; };
+		9852BB2A18CC5A0E00143AB4 /* imageBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBar.png; sourceTree = "<group>"; };
+		9852BB2B18CC5A0E00143AB4 /* imageBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageBar@2x.png"; sourceTree = "<group>"; };
+		9852BB2C18CC5A0E00143AB4 /* imageBarFlat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBarFlat.png; sourceTree = "<group>"; };
+		9852BB2D18CC5A0E00143AB4 /* imageBarFlat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageBarFlat@2x.png"; sourceTree = "<group>"; };
+		9852BB2E18CC5A0E00143AB4 /* imageInput.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageInput.png; sourceTree = "<group>"; };
+		9852BB2F18CC5A0E00143AB4 /* imageInput@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageInput@2x.png"; sourceTree = "<group>"; };
+		9852BB3018CC5A0E00143AB4 /* imageInputFlat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageInputFlat.png; sourceTree = "<group>"; };
+		9852BB3118CC5A0E00143AB4 /* imageInputFlat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageInputFlat@2x.png"; sourceTree = "<group>"; };
+		9852BB3218CC5A0E00143AB4 /* messageBubbleBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBubbleBlue.png; sourceTree = "<group>"; };
+		9852BB3318CC5A0E00143AB4 /* messageBubbleBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageBubbleBlue@2x.png"; sourceTree = "<group>"; };
+		9852BB3418CC5A0E00143AB4 /* messageBubbleGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBubbleGray.png; sourceTree = "<group>"; };
+		9852BB3518CC5A0E00143AB4 /* messageBubbleGray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageBubbleGray@2x.png"; sourceTree = "<group>"; };
+		9852BB3618CC5A0E00143AB4 /* messageBubbleGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBubbleGreen.png; sourceTree = "<group>"; };
+		9852BB3718CC5A0E00143AB4 /* messageBubbleGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageBubbleGreen@2x.png"; sourceTree = "<group>"; };
+		9852BB3818CC5A0E00143AB4 /* messageBubbleHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBubbleHighlighted.png; sourceTree = "<group>"; };
+		9852BB3918CC5A0E00143AB4 /* messageBubbleHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageBubbleHighlighted@2x.png"; sourceTree = "<group>"; };
+		9852BB3A18CC5A0E00143AB4 /* messageBubbleTyping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBubbleTyping.png; sourceTree = "<group>"; };
+		9852BB3B18CC5A0E00143AB4 /* messageBubbleTyping@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageBubbleTyping@2x.png"; sourceTree = "<group>"; };
 		ED9A7E4116F7C6F100030E3E /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +226,7 @@
 		1669E521166ED05F00C535A9 /* SpotChat */ = {
 			isa = PBXGroup;
 			children = (
+				9852BB0E18CC5A0E00143AB4 /* AMBubbleTableViewController */,
 				985012D418CBE92D00CCA039 /* RoomViewController.h */,
 				985012D518CBE92D00CCA039 /* RoomViewController.m */,
 				1669E52A166ED05F00C535A9 /* AppDelegate.h */,
@@ -171,6 +255,65 @@
 				1669E531166ED05F00C535A9 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9852BB0E18CC5A0E00143AB4 /* AMBubbleTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9852BB0F18CC5A0E00143AB4 /* AMBubbleAccessoryView.h */,
+				9852BB1018CC5A0E00143AB4 /* AMBubbleAccessoryView.m */,
+				9852BB1118CC5A0E00143AB4 /* AMBubbleFlatAccessoryView.h */,
+				9852BB1218CC5A0E00143AB4 /* AMBubbleFlatAccessoryView.m */,
+				9852BB1318CC5A0E00143AB4 /* AMBubbleGlobals.h */,
+				9852BB1418CC5A0E00143AB4 /* AMBubbleGlobals.m */,
+				9852BB1518CC5A0E00143AB4 /* AMBubbleTableCell.h */,
+				9852BB1618CC5A0E00143AB4 /* AMBubbleTableCell.m */,
+				9852BB1718CC5A0E00143AB4 /* AMBubbleTableViewController.h */,
+				9852BB1818CC5A0E00143AB4 /* AMBubbleTableViewController.m */,
+				9852BB1918CC5A0E00143AB4 /* Resources */,
+			);
+			path = AMBubbleTableViewController;
+			sourceTree = "<group>";
+		};
+		9852BB1918CC5A0E00143AB4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9852BB1A18CC5A0E00143AB4 /* bubbleFlatIncoming.png */,
+				9852BB1B18CC5A0E00143AB4 /* bubbleFlatIncoming@2x.png */,
+				9852BB1C18CC5A0E00143AB4 /* bubbleFlatOutgoing.png */,
+				9852BB1D18CC5A0E00143AB4 /* bubbleFlatOutgoing@2x.png */,
+				9852BB1E18CC5A0E00143AB4 /* bubbleSquareIncoming.png */,
+				9852BB1F18CC5A0E00143AB4 /* bubbleSquareIncoming@2x.png */,
+				9852BB2018CC5A0E00143AB4 /* bubbleSquareOutgoing.png */,
+				9852BB2118CC5A0E00143AB4 /* bubbleSquareOutgoing@2x.png */,
+				9852BB2218CC5A0E00143AB4 /* buttonSend.png */,
+				9852BB2318CC5A0E00143AB4 /* buttonSend@2x.png */,
+				9852BB2418CC5A0E00143AB4 /* buttonSendFlat.png */,
+				9852BB2518CC5A0E00143AB4 /* buttonSendFlat@2x.png */,
+				9852BB2618CC5A0E00143AB4 /* buttonSendHighlighted.png */,
+				9852BB2718CC5A0E00143AB4 /* buttonSendHighlighted@2x.png */,
+				9852BB2818CC5A0E00143AB4 /* buttonSendHighlightedFlat.png */,
+				9852BB2918CC5A0E00143AB4 /* buttonSendHighlightedFlat@2x.png */,
+				9852BB2A18CC5A0E00143AB4 /* imageBar.png */,
+				9852BB2B18CC5A0E00143AB4 /* imageBar@2x.png */,
+				9852BB2C18CC5A0E00143AB4 /* imageBarFlat.png */,
+				9852BB2D18CC5A0E00143AB4 /* imageBarFlat@2x.png */,
+				9852BB2E18CC5A0E00143AB4 /* imageInput.png */,
+				9852BB2F18CC5A0E00143AB4 /* imageInput@2x.png */,
+				9852BB3018CC5A0E00143AB4 /* imageInputFlat.png */,
+				9852BB3118CC5A0E00143AB4 /* imageInputFlat@2x.png */,
+				9852BB3218CC5A0E00143AB4 /* messageBubbleBlue.png */,
+				9852BB3318CC5A0E00143AB4 /* messageBubbleBlue@2x.png */,
+				9852BB3418CC5A0E00143AB4 /* messageBubbleGray.png */,
+				9852BB3518CC5A0E00143AB4 /* messageBubbleGray@2x.png */,
+				9852BB3618CC5A0E00143AB4 /* messageBubbleGreen.png */,
+				9852BB3718CC5A0E00143AB4 /* messageBubbleGreen@2x.png */,
+				9852BB3818CC5A0E00143AB4 /* messageBubbleHighlighted.png */,
+				9852BB3918CC5A0E00143AB4 /* messageBubbleHighlighted@2x.png */,
+				9852BB3A18CC5A0E00143AB4 /* messageBubbleTyping.png */,
+				9852BB3B18CC5A0E00143AB4 /* messageBubbleTyping@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,11 +387,45 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9852BB5518CC5A0E00143AB4 /* imageInput.png in Resources */,
+				9852BB4718CC5A0E00143AB4 /* bubbleSquareOutgoing.png in Resources */,
+				9852BB4C18CC5A0E00143AB4 /* buttonSendFlat@2x.png in Resources */,
+				9852BB5918CC5A0E00143AB4 /* messageBubbleBlue.png in Resources */,
+				9852BB5318CC5A0E00143AB4 /* imageBarFlat.png in Resources */,
+				9852BB5018CC5A0E00143AB4 /* buttonSendHighlightedFlat@2x.png in Resources */,
+				9852BB5818CC5A0E00143AB4 /* imageInputFlat@2x.png in Resources */,
+				9852BB6218CC5A0E00143AB4 /* messageBubbleTyping@2x.png in Resources */,
+				9852BB5C18CC5A0E00143AB4 /* messageBubbleGray@2x.png in Resources */,
+				9852BB6118CC5A0E00143AB4 /* messageBubbleTyping.png in Resources */,
+				9852BB4318CC5A0E00143AB4 /* bubbleFlatOutgoing.png in Resources */,
+				9852BB5F18CC5A0E00143AB4 /* messageBubbleHighlighted.png in Resources */,
+				9852BB4B18CC5A0E00143AB4 /* buttonSendFlat.png in Resources */,
+				9852BB5418CC5A0E00143AB4 /* imageBarFlat@2x.png in Resources */,
+				9852BB4A18CC5A0E00143AB4 /* buttonSend@2x.png in Resources */,
+				9852BB5E18CC5A0E00143AB4 /* messageBubbleGreen@2x.png in Resources */,
 				1669E526166ED05F00C535A9 /* InfoPlist.strings in Resources */,
+				9852BB5D18CC5A0E00143AB4 /* messageBubbleGreen.png in Resources */,
+				9852BB5B18CC5A0E00143AB4 /* messageBubbleGray.png in Resources */,
+				9852BB5218CC5A0E00143AB4 /* imageBar@2x.png in Resources */,
+				9852BB4918CC5A0E00143AB4 /* buttonSend.png in Resources */,
 				1669E52E166ED05F00C535A9 /* Default.png in Resources */,
+				9852BB5618CC5A0E00143AB4 /* imageInput@2x.png in Resources */,
+				9852BB6018CC5A0E00143AB4 /* messageBubbleHighlighted@2x.png in Resources */,
 				1669E530166ED05F00C535A9 /* Default@2x.png in Resources */,
+				9852BB4D18CC5A0E00143AB4 /* buttonSendHighlighted.png in Resources */,
 				1669E532166ED05F00C535A9 /* Default-568h@2x.png in Resources */,
+				9852BB4418CC5A0E00143AB4 /* bubbleFlatOutgoing@2x.png in Resources */,
+				9852BB5118CC5A0E00143AB4 /* imageBar.png in Resources */,
+				9852BB4E18CC5A0E00143AB4 /* buttonSendHighlighted@2x.png in Resources */,
+				9852BB4118CC5A0E00143AB4 /* bubbleFlatIncoming.png in Resources */,
+				9852BB4218CC5A0E00143AB4 /* bubbleFlatIncoming@2x.png in Resources */,
+				9852BB5A18CC5A0E00143AB4 /* messageBubbleBlue@2x.png in Resources */,
+				9852BB4818CC5A0E00143AB4 /* bubbleSquareOutgoing@2x.png in Resources */,
+				9852BB4618CC5A0E00143AB4 /* bubbleSquareIncoming@2x.png in Resources */,
+				9852BB4518CC5A0E00143AB4 /* bubbleSquareIncoming.png in Resources */,
+				9852BB4F18CC5A0E00143AB4 /* buttonSendHighlightedFlat.png in Resources */,
 				1669E535166ED05F00C535A9 /* iPhone.storyboard in Resources */,
+				9852BB5718CC5A0E00143AB4 /* imageInputFlat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,10 +460,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1669E528166ED05F00C535A9 /* main.m in Sources */,
+				9852BB3C18CC5A0E00143AB4 /* AMBubbleAccessoryView.m in Sources */,
 				985012D618CBE92D00CCA039 /* RoomViewController.m in Sources */,
 				1669E52C166ED05F00C535A9 /* AppDelegate.m in Sources */,
+				9852BB3F18CC5A0E00143AB4 /* AMBubbleTableCell.m in Sources */,
 				28B5E10B18CC150F00925185 /* MapViewController.m in Sources */,
 				1669E53B166ED05F00C535A9 /* ViewController.m in Sources */,
+				9852BB3D18CC5A0E00143AB4 /* AMBubbleFlatAccessoryView.m in Sources */,
+				9852BB3E18CC5A0E00143AB4 /* AMBubbleGlobals.m in Sources */,
+				9852BB4018CC5A0E00143AB4 /* AMBubbleTableViewController.m in Sources */,
 				16D044E416718E13006D1FC5 /* UITouchTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

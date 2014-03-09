@@ -7,8 +7,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Firebase/Firebase.h>
+#import "AMBubbleTableViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : AMBubbleTableViewController
 
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, strong) NSMutableArray* chat;
@@ -16,9 +17,5 @@
 @property (nonatomic, strong) Firebase* messagesRef;
 @property (nonatomic, strong) NSString* roomId;
 @property (nonatomic, strong) NSString* roomName;
-
-@property (weak, nonatomic) IBOutlet UITextField *textField;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UIButton *nameField;
 
 @end
