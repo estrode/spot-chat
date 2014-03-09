@@ -45,7 +45,7 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application
 {
-
+    [[UINavigationBar appearance] setBarTintColor:[UIColor yellowColor]];
 }
 
 @end

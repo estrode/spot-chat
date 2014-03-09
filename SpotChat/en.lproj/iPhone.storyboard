@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Room View Controller - spott-->
+        <!--Room View Controller-->
         <scene sceneID="qr6-kU-xfA">
             <objects>
                 <tableViewController id="G23-3m-BZq" customClass="RoomViewController" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                             <outlet property="delegate" destination="G23-3m-BZq" id="XZu-bD-fVF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="spott" id="grd-9A-yCZ">
+                    <navigationItem key="navigationItem" id="grd-9A-yCZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="tJq-Il-0Ik">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -133,6 +133,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.72156862745098038" green="0.25098039215686274" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
