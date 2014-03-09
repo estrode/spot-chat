@@ -43,6 +43,12 @@
         // Reload the table view so the new message will show up.
         [self.tableView reloadData];
     }];
+    
+    //Change Status Bar Style to Light Content
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    //Remove separators from Table View
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,11 +81,19 @@
     }
     
     NSDictionary* room = [self.rooms objectAtIndex:indexPath.row];
+    NSDictionary* users = room[@"users"];
     
     cell.textLabel.text = room[@"roomName"];
-    //cell.detailTextLabel.text = chatMessage[@"name"];
+    cell.detailTextLabel.text = [[NSString alloc] initWithFormat:@"%lu Active Users", (unsigned long)users.count];
+    
+    //Changing font of cell
+    cell.textLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:25.0f];
     
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tbView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 45;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
