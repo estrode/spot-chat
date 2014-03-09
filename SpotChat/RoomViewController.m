@@ -14,9 +14,12 @@
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) NSMutableArray *regionArray;
 @property (strong, nonatomic) IBOutlet UINavigationItem *spottNavItem;
+@property (nonatomic, assign) NSUInteger counter;
 @end
 
 @implementation RoomViewController
+
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -48,6 +51,8 @@
         [self initializeLocationUpdates];
         for (CLRegion *geofence in geofences) {
             [_locationManager requestStateForRegion:geofence];
+            NSLog(@" data %@", [self.regionArray objectAtIndex:self.counter]);
+            self.counter = self.counter + 1;
         }
         // Reload the table view so the new room will show up.
         [self.tableView reloadData];
@@ -64,7 +69,6 @@
     titleLabel.font = [UIFont fontWithName:@"Circo" size:22.5];
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.text = @"spott";
-    //titleLabel.textAlignment = NSTextAlignmentRight;
     self.navigationItem.titleView.frame = CGRectMake(0, 0, 40, 55);
     [self.navigationItem setTitleView:titleLabel];
     
