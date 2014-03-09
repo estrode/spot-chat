@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <Firebase/Firebase.h>
 
 
 @interface MapViewController : UIViewController<CLLocationManagerDelegate, MKMapViewDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, assign) BOOL *isFollowing;
+@property (nonatomic, strong) Firebase* firebase;
 @end
