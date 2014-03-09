@@ -7,6 +7,7 @@
 //
 
 #import "MapViewController.h"
+#define kFirechatNS @"https://spot-chat.firebaseio.com/"
 
 @interface MapViewController ()
 @property(strong,nonatomic) CLLocationManager *locationManager;
@@ -21,6 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNS];
 	// Do any additional setup after loading the view, typically from a nib.
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
@@ -71,6 +73,7 @@
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex  
 {
     NSLog(@"Alert View dismissed with button at index %d",buttonIndex);
+    Firebase* dataRef = [self.firebase childByAppendingPath:@"room-metadata"];
     
     switch (alertView.alertViewStyle)
     {
@@ -88,6 +91,15 @@
                     [self.mapView removeAnnotation:annotation];
                 }
             } else {
+                CLLocationDistance radius;
+                CLLocationCoordinate2D coordinate;
+                for (id<MKOverlay> overlay in _mapView.overlays)
+                {
+                    radius = [(MKCircle*)overlay radius];
+                    coordinate = [overlay coordinate];
+                }
+                Firebase* roomRef = [dataRef childByAutoId];
+                [roomRef setValue:@{@"roomName" : textField.text, @"id" : dataRef.name, @"radius" : [NSNumber numberWithDouble:radius], @"latitude" : [NSNumber numberWithDouble:coordinate.latitude], @"longitude" : [NSNumber numberWithDouble:coordinate.longitude] }];
                 [self.navigationController popViewControllerAnimated:TRUE];
             }
         }
