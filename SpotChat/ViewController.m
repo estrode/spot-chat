@@ -31,6 +31,8 @@
     self.firebase = [[Firebase alloc] initWithUrl:kFirechatNS];
     self.messagesRef = [[Firebase alloc] init];
     Firebase* roomRef = [self.firebase childByAppendingPath:@"room-messages"];
+    Firebase* dataRef = [self.firebase childByAppendingPath:@"room-metadata"];
+    Firebase* usersRef = [dataRef childByAppendingPath:[NSString stringWithFormat:@"%@", self.roomId]];
     self.messagesRef = [roomRef childByAppendingPath:[NSString stringWithFormat:@"%@", self.roomId]];
     
     // Pick a random number between 1-1000 for our username.
@@ -49,12 +51,26 @@
         [self.tableView reloadData];
     }];
     
+    Firebase* users2Ref = [usersRef childByAppendingPath:@"users"];
+    
+    self.userRef = [users2Ref childByAutoId];
+    [self.userRef setValue:@{@"name" : self.name}];
+    
     [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+-(void) viewWillDisappear:(BOOL)animated {
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+        // back button was pressed.  We know this is true because self is no longer
+        // in the navigation stack.
+        [self.userRef removeValue]; //remove yourself from metadata to update user count
+    }
+    [super viewWillDisappear:animated];
 }
 
 - (void)swipedCellAtIndexPath:(NSIndexPath *)indexPath withFrame:(CGRect)frame andDirection:(UISwipeGestureRecognizerDirection)direction
