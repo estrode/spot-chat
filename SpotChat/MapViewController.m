@@ -99,7 +99,7 @@
                     coordinate = [overlay coordinate];
                 }
                 Firebase* roomRef = [dataRef childByAutoId];
-                [roomRef setValue:@{@"roomName" : textField.text, @"id" : dataRef.name, @"radius" : [NSNumber numberWithDouble:radius], @"latitude" : [NSNumber numberWithDouble:coordinate.latitude], @"longitude" : [NSNumber numberWithDouble:coordinate.longitude] }];
+                [roomRef setValue:@{@"roomName" : textField.text, @"id" : roomRef.name, @"radius" : [NSNumber numberWithDouble:radius], @"latitude" : [NSNumber numberWithDouble:coordinate.latitude], @"longitude" : [NSNumber numberWithDouble:coordinate.longitude] }];
                 [self.navigationController popViewControllerAnimated:TRUE];
             }
         }
