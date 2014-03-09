@@ -13,6 +13,7 @@
 @interface RoomViewController ()
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) NSMutableArray *regionArray;
+@property (strong, nonatomic) IBOutlet UINavigationItem *spottNavItem;
 @end
 
 @implementation RoomViewController
@@ -55,6 +56,17 @@
     
     //Remove separators from Table View
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
+    //Putting Circo font to Nav
+    //Putting Circo font to Nav
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 75, 44)];
+    titleLabel.font = [UIFont fontWithName:@"Circo" size:22.5];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.text = @"spott";
+    titleLabel.textAlignment = NSTextAlignmentRight;
+    [self.navigationItem setTitleView:titleLabel];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning

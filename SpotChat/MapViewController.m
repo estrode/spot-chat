@@ -10,6 +10,7 @@
 #define kFirechatNS @"https://spot-chat.firebaseio.com/"
 
 @interface MapViewController ()
+@property (strong, nonatomic) IBOutlet UINavigationItem *navItem;
 @property(strong,nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong,nonatomic) IBOutlet UIToolbar *followMe;
@@ -38,8 +39,11 @@
     _isFollowing = NO;
     [self.locationManager startUpdatingLocation];
     
+    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    
     
 }
+
 - (IBAction)followMe:(id)sender {
     if(_isFollowing) {
         _isFollowing = NO;
