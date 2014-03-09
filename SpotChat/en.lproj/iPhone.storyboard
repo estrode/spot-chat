@@ -49,15 +49,14 @@
             </objects>
             <point key="canvasLocation" x="1491" y="-52"/>
         </scene>
-        <!--Room View Controller - Rooms-->
+        <!--Room View Controller - spott-->
         <scene sceneID="qr6-kU-xfA">
             <objects>
                 <tableViewController id="G23-3m-BZq" customClass="RoomViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="REI-er-kxb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexTrackingBackgroundColor" red="0.9021296501159668" green="0.82466880119143837" blue="0.87368332641373381" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.91932397959183676" green="0.91932397959183676" blue="0.91932397959183676" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="OKf-aP-4LU" detailTextLabel="dBQ-4x-8Ev" style="IBUITableViewCellStyleSubtitle" id="rFL-cd-ttO">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -82,7 +81,8 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.88406808039999996" green="0.88406808039999996" blue="0.88406808039999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.91932397960000001" green="0.91932397960000001" blue="0.91932397960000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.72156862749999995" green="0.25098039220000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="2" kind="push" identifier="showChatRoom" id="75v-sN-9LI"/>
                                 </connections>
@@ -93,7 +93,7 @@
                             <outlet property="delegate" destination="G23-3m-BZq" id="XZu-bD-fVF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Rooms" id="grd-9A-yCZ">
+                    <navigationItem key="navigationItem" title="spott" id="grd-9A-yCZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="tJq-Il-0Ik">
                             <connections>
                                 <segue destination="n2D-Vd-at6" kind="push" id="qst-mz-obY"/>
@@ -155,6 +155,10 @@
                 <navigationController definesPresentationContext="YES" id="xby-fq-2fp" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HOE-sZ-Djt">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.72156862745098038" green="0.25098039215686274" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="G23-3m-BZq" kind="relationship" relationship="rootViewController" id="m2G-33-Dv7"/>
