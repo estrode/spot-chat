@@ -34,7 +34,6 @@
     //[lpgr release];
     
     _isFollowing = NO;
-    _canDraw = NO;
     [self.locationManager startUpdatingLocation];
     
     
@@ -69,7 +68,7 @@
 
 
 
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex 
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex  
 {
     NSLog(@"Alert View dismissed with button at index %d",buttonIndex);
     
@@ -81,10 +80,10 @@
             NSLog(@"Plain text input: %@",textField.text);
             
             if(buttonIndex == 0 ) {
-                _canDraw = NO;
-            } else {
-
-                _canDraw = YES;
+                for (id<MKOverlay> overlay in _mapView.overlays)
+                {
+                    [self.mapView removeOverlay:overlay];
+                }
             }
         }
             break;
@@ -112,7 +111,6 @@
     [alertView show];
     
 
-    if(_canDraw) {
     CGPoint touchPoint = [gestureRecognizer locationInView:_mapView];
     CLLocationCoordinate2D touchMapCoordinate = [_mapView convertPoint:touchPoint toCoordinateFromView:_mapView];
     
@@ -127,7 +125,8 @@
     //add circle with 5km radius where user touched down...
     MKCircle *circle = [MKCircle circleWithCenterCoordinate:touchMapCoordinate radius:100];
     [_mapView addOverlay:circle];
-    }
+    
+    
 }
 
 
