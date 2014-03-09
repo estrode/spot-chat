@@ -43,8 +43,8 @@
     
     [self.roomRef observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
         [self.regionArray addObject:snapshot.value];
-        NSLog(@"%lu elements", (unsigned long)self.regionArray.count);
         NSArray *geofences = [self buildGeofenceData];
+        NSLog(@"%lu elements", (unsigned long)geofences.count);
         [self initializeRegionMonitoring:geofences];
         [self initializeLocationUpdates];
         // Reload the table view so the new room will show up.
@@ -139,7 +139,6 @@
       didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region
 {
     if (state == CLRegionStateInside){
-        NSLog(@"is in target region");
         for (NSDictionary *room in self.regionArray) {
             if ([region.identifier isEqual : room[@"id"]]) {
                 if (![self.rooms containsObject:room]) {
@@ -149,7 +148,7 @@
             }
         }
     }else{
-        NSLog(@"is out of target region");
+        [self.tableView reloadData];
     }
 }
 
@@ -198,7 +197,6 @@
 #pragma mark - Location Manager - Region Task Methods
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
-    NSLog(@"Entered Region - %@", region.identifier);
     for (NSDictionary *room in self.regionArray) {
         if ([region.identifier isEqual : room[@"id"]]) {
             if (![self.rooms containsObject:room]) {
@@ -210,7 +208,6 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
-    NSLog(@"Exited Region - %@", region.identifier);
     for (NSDictionary *room in self.rooms) {
         if ([region.identifier isEqual : room[@"id"]]) {
             [self.rooms removeObject:room];
@@ -220,7 +217,6 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
-    NSLog(@"Started monitoring %@ region", region.identifier);
 }
 
 - (void)initializeLocationUpdates {
