@@ -44,9 +44,11 @@
     [self.roomRef observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
         [self.regionArray addObject:snapshot.value];
         NSArray *geofences = [self buildGeofenceData];
-        NSLog(@"%lu elements", (unsigned long)geofences.count);
         [self initializeRegionMonitoring:geofences];
         [self initializeLocationUpdates];
+        for (CLRegion *geofence in geofences) {
+            [_locationManager requestStateForRegion:geofence];
+        }
         // Reload the table view so the new room will show up.
         [self.tableView reloadData];
     }];
