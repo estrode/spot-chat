@@ -49,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="1491" y="-52"/>
         </scene>
-        <!--Room View Controller - Root View Controller-->
+        <!--Room View Controller - Chat Rooms-->
         <scene sceneID="qr6-kU-xfA">
             <objects>
                 <tableViewController id="G23-3m-BZq" customClass="RoomViewController" sceneMemberID="viewController">
@@ -57,14 +57,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.9021296501159668" green="0.82466880119143837" blue="0.87368332641373381" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="rFL-cd-ttO">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="OKf-aP-4LU" detailTextLabel="dBQ-4x-8Ev" style="IBUITableViewCellStyleSubtitle" id="rFL-cd-ttO">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rFL-cd-ttO" id="1d2-0y-yRL">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OKf-aP-4LU">
+                                            <rect key="frame" x="15" y="3" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dBQ-4x-8Ev">
+                                            <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.88406808039999996" green="0.88406808039999996" blue="0.88406808039999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="2" kind="push" identifier="showChatRoom" id="75v-sN-9LI"/>
                                 </connections>
@@ -75,7 +93,7 @@
                             <outlet property="delegate" destination="G23-3m-BZq" id="XZu-bD-fVF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="grd-9A-yCZ">
+                    <navigationItem key="navigationItem" title="Chat Rooms" id="grd-9A-yCZ">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="t2y-Z5-S0F">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="ign-jM-x5t">
                                 <rect key="frame" x="282" y="11" width="22" height="22"/>
@@ -90,6 +108,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="chatNavItem" destination="grd-9A-yCZ" id="W6B-PC-Nbq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6w-Am-8VG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

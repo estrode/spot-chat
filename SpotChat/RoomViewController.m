@@ -11,6 +11,7 @@
 #define kFirechatNS @"https://spot-chat.firebaseio.com/"
 
 @interface RoomViewController ()
+@property (strong, nonatomic) IBOutlet UINavigationItem *chatNavItem;
 
 @end
 
