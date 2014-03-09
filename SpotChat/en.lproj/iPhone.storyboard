@@ -75,7 +75,18 @@
                             <outlet property="delegate" destination="G23-3m-BZq" id="XZu-bD-fVF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="grd-9A-yCZ"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="grd-9A-yCZ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="t2y-Z5-S0F">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="ign-jM-x5t">
+                                <rect key="frame" x="282" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6w-Am-8VG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
