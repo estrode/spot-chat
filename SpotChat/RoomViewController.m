@@ -53,6 +53,8 @@
     
     //Change nav bar to have image
     self.spottNavItem.titleView = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"SpottImage.png"]];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
 }
 

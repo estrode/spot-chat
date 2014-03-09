@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="xby-fq-2fp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="xby-fq-2fp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -50,6 +50,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="spott" id="grd-9A-yCZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="tJq-Il-0Ik">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="n2D-Vd-at6" kind="push" id="qst-mz-obY"/>
                             </connections>
@@ -91,6 +92,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="                         " id="zWq-b0-5SC">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="followMe:" destination="n2D-Vd-at6" id="Xzg-Re-YiD"/>
                                         </connections>
@@ -111,11 +113,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bsG-KX-GDx"/>
+                    <navigationItem key="navigationItem" id="HSW-Ll-GXh"/>
                     <connections>
                         <outlet property="followLabel" destination="05X-PX-zjl" id="l2y-Fm-q8i"/>
                         <outlet property="followMe" destination="e1X-9R-P6o" id="wLS-Bt-dFT"/>
                         <outlet property="mapView" destination="Dj9-co-3be" id="Mqr-ua-sD0"/>
+                        <outlet property="navItem" destination="HSW-Ll-GXh" id="gD5-zd-EjE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9d-fg-9Rm" userLabel="First Responder" sceneMemberID="firstResponder"/>
