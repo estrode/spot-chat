@@ -140,7 +140,7 @@
     //[pa release];
     
     //add circle with 5km radius where user touched down...
-    MKCircle *circle = [MKCircle circleWithCenterCoordinate:touchMapCoordinate radius:100];
+    MKCircle *circle = [MKCircle circleWithCenterCoordinate:touchMapCoordinate radius:1000];
     [_mapView addOverlay:circle];
     
     
