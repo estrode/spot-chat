@@ -11,8 +11,9 @@
 #define kFirechatNS @"https://spot-chat.firebaseio.com/"
 
 @interface RoomViewController ()
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) NSMutableArray *regionArray;
 @property (strong, nonatomic) IBOutlet UINavigationItem *spottNavItem;
-
 @end
 
 @implementation RoomViewController
@@ -32,16 +33,21 @@
 
     // Initialize array that will store chat messages.
     self.rooms = [[NSMutableArray alloc] init];
+    self.regionArray = [[NSMutableArray alloc] init];
     
     // Initialize the root of our Firebase namespace.
     self.firebase = [[Firebase alloc] initWithUrl:kFirechatNS];
     
-    Firebase* roomRef = [self.firebase childByAppendingPath:@"room-metadata"];
+    self.roomRef = [self.firebase childByAppendingPath:@"room-metadata"];
+    [self initializeLocationManager];
     
-    [roomRef observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
-        // Add the rooms to the array.
-        [self.rooms addObject:snapshot.value];
-        // Reload the table view so the new message will show up.
+    [self.roomRef observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+        [self.regionArray addObject:snapshot.value];
+        NSArray *geofences = [self buildGeofenceData];
+        NSLog(@"%lu elements", (unsigned long)geofences.count);
+        [self initializeRegionMonitoring:geofences];
+        [self initializeLocationUpdates];
+        // Reload the table view so the new room will show up.
         [self.tableView reloadData];
     }];
     
@@ -116,6 +122,115 @@
         destViewController.roomId = room[@"id"];
         destViewController.roomName = room[@"roomName"];
     }
+}
+
+- (void)initializeLocationManager {
+    // Check to ensure location services are enabled
+    if(![CLLocationManager locationServicesEnabled]) {
+        [self showAlertWithMessage:@"You need to enable location services to use this app."];
+        return;
+    }
+    
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+      didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region
+{
+    if (state == CLRegionStateInside){
+        for (NSDictionary *room in self.regionArray) {
+            if ([region.identifier isEqual : room[@"id"]]) {
+                if (![self.rooms containsObject:room]) {
+                     [self.rooms addObject:room];
+                }
+                [self.tableView reloadData];
+            }
+        }
+    }else{
+        [self.tableView reloadData];
+    }
+}
+
+- (void) initializeRegionMonitoring:(NSArray*)geofences {
+    
+    if (_locationManager == nil) {
+        [NSException raise:@"Location Manager Not Initialized" format:@"You must initialize location manager first."];
+    }
+    
+    if(![CLLocationManager regionMonitoringAvailable]) {
+        [self showAlertWithMessage:@"This app requires region monitoring features which are unavailable on this device."];
+        return;
+    }
+    
+    for(CLRegion *geofence in geofences) {
+        [_locationManager requestStateForRegion:geofence];
+        [_locationManager startMonitoringForRegion:geofence];
+    }
+    
+}
+
+- (NSArray*) buildGeofenceData {
+    NSMutableArray *geofences = [NSMutableArray array];
+    for(NSDictionary *regionDict in _regionArray) {
+        CLRegion *region = [self mapDictionaryToRegion:regionDict];
+        [geofences addObject:region];
+    }
+    
+    return [NSArray arrayWithArray:geofences];
+}
+
+- (CLRegion*)mapDictionaryToRegion:(NSDictionary*)dictionary {
+    NSString *title = [dictionary valueForKey:@"id"];
+    
+    CLLocationDegrees latitude = [[dictionary valueForKey:@"latitude"] doubleValue];
+    CLLocationDegrees longitude =[[dictionary valueForKey:@"longitude"] doubleValue];
+    CLLocationCoordinate2D centerCoordinate = CLLocationCoordinate2DMake(latitude, longitude);
+    
+    CLLocationDistance regionRadius = [[dictionary valueForKey:@"radius"] doubleValue];
+    
+    return [[CLRegion alloc] initCircularRegionWithCenter:centerCoordinate
+                                                   radius:regionRadius
+                                               identifier:title];
+}
+
+#pragma mark - Location Manager - Region Task Methods
+
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
+    for (NSDictionary *room in self.regionArray) {
+        if ([region.identifier isEqual : room[@"id"]]) {
+            if (![self.rooms containsObject:room]) {
+                [self.rooms addObject:room];
+            }
+            [self.tableView reloadData];
+        }
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
+    for (NSDictionary *room in self.rooms) {
+        if ([region.identifier isEqual : room[@"id"]]) {
+            [self.rooms removeObject:room];
+            [self.tableView reloadData];
+        }
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
+}
+
+- (void)initializeLocationUpdates {
+    [_locationManager startUpdatingLocation];
+}
+
+
+- (void)showAlertWithMessage:(NSString*)alertText {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Location Services Error"
+                                                        message:alertText
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+    [alertView show];
 }
 
 /*
