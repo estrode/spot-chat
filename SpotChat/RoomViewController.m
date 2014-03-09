@@ -50,14 +50,14 @@
     
     //Remove separators from Table View
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    
+
     //Putting Circo font to Nav
-    //Putting Circo font to Nav
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 75, 44)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 40, 55)];
     titleLabel.font = [UIFont fontWithName:@"Circo" size:22.5];
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.text = @"spott";
-    titleLabel.textAlignment = NSTextAlignmentRight;
+    //titleLabel.textAlignment = NSTextAlignmentRight;
+    self.navigationItem.titleView.frame = CGRectMake(0, 0, 40, 55);
     [self.navigationItem setTitleView:titleLabel];
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];

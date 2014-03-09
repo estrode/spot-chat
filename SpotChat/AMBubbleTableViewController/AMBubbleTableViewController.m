@@ -13,7 +13,6 @@
 #define kLineHeight 30.0f
 #define kButtonWidth 78.0f
 
-
 @interface AMBubbleTableViewController () <UITableViewDataSource, UITableViewDelegate, UITextViewDelegate>
 
 @property (strong, nonatomic) NSMutableDictionary*	options;

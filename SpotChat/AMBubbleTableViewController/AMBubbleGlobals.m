@@ -48,7 +48,7 @@ NSString *const AMOptionsBubbleDetectionType = @"AMOptionsBubbleDetectionType";
 	AMOptionsAccessoryClass: @"AMBubbleAccessoryView",
 	AMOptionsTimestampShortFont: [UIFont boldSystemFontOfSize:11],
 	AMOptionsTimestampFont: [UIFont boldSystemFontOfSize:13],
-	AMOptionsAvatarSize: @50,
+	AMOptionsAvatarSize: @35,
 	AMOptionsAccessorySize: @50,
 	AMOptionsAccessoryMargin: @5,
 	AMOptionsTimestampHeight: @40,
