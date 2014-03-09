@@ -86,9 +86,10 @@
     }
     
     NSDictionary* room = [self.rooms objectAtIndex:indexPath.row];
+    NSDictionary* users = room[@"users"];
     
     cell.textLabel.text = room[@"roomName"];
-    //cell.detailTextLabel.text = chatMessage[@"name"];
+    cell.detailTextLabel.text = [[NSString alloc] initWithFormat:@"%lu Active Users", (unsigned long)users.count];
     
     //Changing font of cell
     cell.textLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:25.0f];
