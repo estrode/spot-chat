@@ -84,6 +84,11 @@
                 {
                     [self.mapView removeOverlay:overlay];
                 }
+                for(id<MKAnnotation> annotation in _mapView.annotations) {
+                    [self.mapView removeAnnotation:annotation];
+                }
+            } else {
+                [self.navigationController popViewControllerAnimated:TRUE];
             }
         }
             break;
