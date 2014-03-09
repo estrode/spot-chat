@@ -78,6 +78,35 @@
     }
 }
 
+- (UIImage*)avatarForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary* chatMessage = [self.chat objectAtIndex:indexPath.row];
+    UIFont *font = [UIFont fontWithName:@"AvenirNext-Regular" size:16.0];
+    CGFloat placeholderHW = 50 - 15;
+    BMInitialsPlaceholderView* placeholder = [[BMInitialsPlaceholderView alloc] initWithDiameter:placeholderHW];
+    placeholder.font = font;
+    placeholder.initials = [self initialStringForPersonString:chatMessage[@"name"]];
+    placeholder.circleColor = [self circleColorForIndexPath:indexPath];
+	return placeholder.cachedVisualRepresentation;
+}
+
+- (UIColor *)circleColorForIndexPath:(NSIndexPath *)indexPath {
+    return [UIColor colorWithHue:arc4random() % 256 / 256.0 saturation:0.7 brightness:0.8 alpha:1.0];
+}
+
+- (NSString *)initialStringForPersonString:(NSString *)personString {
+    NSArray *comps = [personString componentsSeparatedByString:@" "];
+    if ([comps count] >= 2) {
+        NSString *firstName = comps[0];
+        NSString *lastName = comps[1];
+        return [NSString stringWithFormat:@"%@%@", [firstName substringToIndex:1], [lastName substringToIndex:1]];
+    } else if ([comps count]) {
+        NSString *name = comps[0];
+        return [name substringToIndex:1];
+    }
+    return @"Unknown";
+}
+
 - (NSString *)textForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary* chatMessage = [self.chat objectAtIndex:indexPath.row];

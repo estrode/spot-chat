@@ -68,6 +68,7 @@
 		9852BB6018CC5A0E00143AB4 /* messageBubbleHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB3918CC5A0E00143AB4 /* messageBubbleHighlighted@2x.png */; };
 		9852BB6118CC5A0E00143AB4 /* messageBubbleTyping.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB3A18CC5A0E00143AB4 /* messageBubbleTyping.png */; };
 		9852BB6218CC5A0E00143AB4 /* messageBubbleTyping@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9852BB3B18CC5A0E00143AB4 /* messageBubbleTyping@2x.png */; };
+		9852BB6518CC5CCD00143AB4 /* BMInitialsPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852BB6418CC5CCD00143AB4 /* BMInitialsPlaceholderView.m */; };
 		ED9A7E4216F7C6F100030E3E /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9A7E4116F7C6F100030E3E /* Firebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +156,8 @@
 		9852BB3918CC5A0E00143AB4 /* messageBubbleHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageBubbleHighlighted@2x.png"; sourceTree = "<group>"; };
 		9852BB3A18CC5A0E00143AB4 /* messageBubbleTyping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBubbleTyping.png; sourceTree = "<group>"; };
 		9852BB3B18CC5A0E00143AB4 /* messageBubbleTyping@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageBubbleTyping@2x.png"; sourceTree = "<group>"; };
+		9852BB6318CC5CCD00143AB4 /* BMInitialsPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMInitialsPlaceholderView.h; sourceTree = "<group>"; };
+		9852BB6418CC5CCD00143AB4 /* BMInitialsPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMInitialsPlaceholderView.m; sourceTree = "<group>"; };
 		ED9A7E4116F7C6F100030E3E /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -226,6 +229,8 @@
 		1669E521166ED05F00C535A9 /* SpotChat */ = {
 			isa = PBXGroup;
 			children = (
+				9852BB6318CC5CCD00143AB4 /* BMInitialsPlaceholderView.h */,
+				9852BB6418CC5CCD00143AB4 /* BMInitialsPlaceholderView.m */,
 				9852BB0E18CC5A0E00143AB4 /* AMBubbleTableViewController */,
 				985012D418CBE92D00CCA039 /* RoomViewController.h */,
 				985012D518CBE92D00CCA039 /* RoomViewController.m */,
@@ -467,6 +472,7 @@
 				28B5E10B18CC150F00925185 /* MapViewController.m in Sources */,
 				1669E53B166ED05F00C535A9 /* ViewController.m in Sources */,
 				9852BB3D18CC5A0E00143AB4 /* AMBubbleFlatAccessoryView.m in Sources */,
+				9852BB6518CC5CCD00143AB4 /* BMInitialsPlaceholderView.m in Sources */,
 				9852BB3E18CC5A0E00143AB4 /* AMBubbleGlobals.m in Sources */,
 				9852BB4018CC5A0E00143AB4 /* AMBubbleTableViewController.m in Sources */,
 				16D044E416718E13006D1FC5 /* UITouchTableView.m in Sources */,
