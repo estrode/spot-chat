@@ -10,7 +10,8 @@
 #import <MapKit/MapKit.h>
 
 
-@interface MapViewController : UIViewController<CLLocationManagerDelegate, MKMapViewDelegate>
+@interface MapViewController : UIViewController<CLLocationManagerDelegate, MKMapViewDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, assign) BOOL *isFollowing;
+@property (nonatomic, assign) BOOL *canDraw;
 @end

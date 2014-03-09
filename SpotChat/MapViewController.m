@@ -34,6 +34,7 @@
     //[lpgr release];
     
     _isFollowing = NO;
+    _canDraw = NO;
     [self.locationManager startUpdatingLocation];
     
     
@@ -67,11 +68,51 @@
 }
 
 
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex 
+{
+    NSLog(@"Alert View dismissed with button at index %d",buttonIndex);
+    
+    switch (alertView.alertViewStyle)
+    {
+        case UIAlertViewStylePlainTextInput:
+        {
+            UITextField *textField = [alertView textFieldAtIndex:0];
+            NSLog(@"Plain text input: %@",textField.text);
+            
+            if(buttonIndex == 0 ) {
+                _canDraw = NO;
+            } else {
+
+                _canDraw = YES;
+            }
+        }
+            break;
+        
+        default:
+            break;
+    }
+}
+
+
+
 - (void)handleLongPress:(UIGestureRecognizer *)gestureRecognizer
 {
     if (gestureRecognizer.state != UIGestureRecognizerStateBegan)
         return;
     
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Create Chatroom"
+                                                        message:@"Enter Chatroom Name"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"OK", nil];
+    
+    alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+    [alertView show];
+    
+
+    if(_canDraw) {
     CGPoint touchPoint = [gestureRecognizer locationInView:_mapView];
     CLLocationCoordinate2D touchMapCoordinate = [_mapView convertPoint:touchPoint toCoordinateFromView:_mapView];
     
@@ -86,6 +127,7 @@
     //add circle with 5km radius where user touched down...
     MKCircle *circle = [MKCircle circleWithCenterCoordinate:touchMapCoordinate radius:100];
     [_mapView addOverlay:circle];
+    }
 }
 
 

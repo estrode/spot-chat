@@ -84,7 +84,7 @@
                                 <color key="backgroundColor" red="0.91932397960000001" green="0.91932397960000001" blue="0.91932397960000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.72156862749999995" green="0.25098039220000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="2" kind="push" identifier="showChatRoom" id="75v-sN-9LI"/>
+                                    <segue destination="s0M-va-5f2" kind="push" identifier="showChatRoom" id="MSL-Ai-X3z"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -104,6 +104,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6w-Am-8VG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="998" y="-52"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ASb-5b-Xuw">
+            <objects>
+                <viewController id="s0M-va-5f2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2vd-Z9-YcV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kkj-Lk-jEk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eeG-Ao-wBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1585" y="-53"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="NFy-WA-htg">
