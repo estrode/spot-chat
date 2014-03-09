@@ -25,6 +25,9 @@
 		16DAC9DD167287D400A2B44D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9DC167287D400A2B44D /* libicucore.dylib */; };
 		16DAC9DF167287DD00A2B44D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9DE167287DD00A2B44D /* Security.framework */; };
 		16DAC9E1167287E400A2B44D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9E0167287E400A2B44D /* CFNetwork.framework */; };
+		28B5E10B18CC150F00925185 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B5E10A18CC150F00925185 /* MapViewController.m */; };
+		28B5E10D18CC169E00925185 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B5E10C18CC169E00925185 /* MapKit.framework */; };
+		28B5E10F18CC17B900925185 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B5E10E18CC17B900925185 /* CoreLocation.framework */; };
 		985012D618CBE92D00CCA039 /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 985012D518CBE92D00CCA039 /* RoomViewController.m */; };
 		ED9A7E4216F7C6F100030E3E /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9A7E4116F7C6F100030E3E /* Firebase.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +66,10 @@
 		16DAC9DC167287D400A2B44D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		16DAC9DE167287DD00A2B44D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		16DAC9E0167287E400A2B44D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		28B5E10918CC150F00925185 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		28B5E10A18CC150F00925185 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		28B5E10C18CC169E00925185 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		28B5E10E18CC17B900925185 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		985012D418CBE92D00CCA039 /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomViewController.h; sourceTree = "<group>"; };
 		985012D518CBE92D00CCA039 /* RoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomViewController.m; sourceTree = "<group>"; };
 		ED9A7E4116F7C6F100030E3E /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
@@ -73,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B5E10F18CC17B900925185 /* CoreLocation.framework in Frameworks */,
+				28B5E10D18CC169E00925185 /* MapKit.framework in Frameworks */,
 				16DAC9E1167287E400A2B44D /* CFNetwork.framework in Frameworks */,
 				16DAC9DF167287DD00A2B44D /* Security.framework in Frameworks */,
 				16DAC9DD167287D400A2B44D /* libicucore.dylib in Frameworks */,
@@ -121,6 +130,8 @@
 		1669E51A166ED05F00C535A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28B5E10E18CC17B900925185 /* CoreLocation.framework */,
+				28B5E10C18CC169E00925185 /* MapKit.framework */,
 				1669E51B166ED05F00C535A9 /* UIKit.framework */,
 				1669E51D166ED05F00C535A9 /* Foundation.framework */,
 				1669E51F166ED05F00C535A9 /* CoreGraphics.framework */,
@@ -142,6 +153,8 @@
 				1669E522166ED05F00C535A9 /* Supporting Files */,
 				16D044E216718E13006D1FC5 /* UITouchTableView.h */,
 				16D044E316718E13006D1FC5 /* UITouchTableView.m */,
+				28B5E10918CC150F00925185 /* MapViewController.h */,
+				28B5E10A18CC150F00925185 /* MapViewController.m */,
 			);
 			path = SpotChat;
 			sourceTree = "<group>";
@@ -272,6 +285,7 @@
 				1669E528166ED05F00C535A9 /* main.m in Sources */,
 				985012D618CBE92D00CCA039 /* RoomViewController.m in Sources */,
 				1669E52C166ED05F00C535A9 /* AppDelegate.m in Sources */,
+				28B5E10B18CC150F00925185 /* MapViewController.m in Sources */,
 				1669E53B166ED05F00C535A9 /* ViewController.m in Sources */,
 				16D044E416718E13006D1FC5 /* UITouchTableView.m in Sources */,
 			);
